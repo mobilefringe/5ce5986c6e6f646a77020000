@@ -602,7 +602,7 @@ footer {
                 overflow: hidden;
                 z-index: 1;
                 border: none;
-                background: #f70;
+                background: $primary;
                 font-family: Avenir-Medium;
                 font-size: 1rem;
                 color: #363636;
