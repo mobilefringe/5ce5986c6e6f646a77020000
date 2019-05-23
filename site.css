@@ -408,7 +408,7 @@ strong {
             position: relative;
             background: $primary; 
             border-radius: 50%;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
         .fab {
             position: absolute;
