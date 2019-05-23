@@ -423,6 +423,7 @@ strong {
     }
     .social_icon:hover {
         div {
+            border: 1px solid $primary;
             background: $secondary_text;    
         }
         .fab {
