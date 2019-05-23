@@ -605,7 +605,7 @@ footer {
                 background: $primary;
                 font-family: Avenir-Medium;
                 font-size: 1rem;
-                color: #363636;
+                color: $secondary_text;
                 text-align: center;
                 &:before {
                     content: '';
