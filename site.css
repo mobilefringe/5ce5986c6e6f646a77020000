@@ -418,7 +418,7 @@ strong {
             font-size: 1.125rem;
             line-height: normal;
             color: $secondary_text;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
     }
     .social_icon:hover {
