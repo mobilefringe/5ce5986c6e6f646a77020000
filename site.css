@@ -918,10 +918,10 @@ footer {
     .fab {
         padding-left: 10px;
         font-size: 25px;
-        color: $secondary_text;
+        color: $primary;
         transition: color 0.3s ease;
         &:hover {
-            color: $primary;
+            color: $accent;
             cursor: pointer;
         }
     }
