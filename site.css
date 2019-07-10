@@ -575,71 +575,10 @@ footer {
         }
     }
 }
-#mktoForm_3293 {
-    width: 100% !important;
-    .mktoOffset {
-        display: none;
-    }
-    .mktoFieldDescriptor.mktoFormCol {
-        width: 100%;
-    }
-    .mktoForm .mktoFormCol {
-        min-height: unset !important;
-        width: 100% !important;
-        float: none !important;
-    }   
-    .mktoFieldWrap {
-        width: 100% !important;
-    }
-    .mktoButtonRow {
-        width: 100% !important;
-        span.mktoButtonWrap.mktoSimple {
-            margin-left: 0 !important;
-            button.mktoButton {
-                padding: 7.5px 0;
-                width: 100%;
-                display: block;
-                position: relative;
-                overflow: hidden;
-                z-index: 1;
-                border: none;
-                background: $primary;
-                font-family: Avenir-Medium;
-                font-size: 1rem;
-                color: $secondary_text;
-                text-align: center;
-                &:before {
-                    content: '';
-                    z-index: -1;
-                    position: absolute;
-                    top: 50%;
-                    left: 100%;
-                    margin: -15px 0 0 1px;
-                    width: 60px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background: $accent;
-                    -webkit-transform-origin: 100% 50%;
-                    transform-origin: 100% 50%;
-                    -webkit-transform: scale3d(1, 2, 1);
-                    transform: scale3d(1, 2, 1);
-                    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-                    transition: transform 0.3s, opacity 0.3s;
-                    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
-                    transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
-                }
-            }
-            button.mktoButton:hover {
-                text-decoration: none;
-                &:before {
-                    -webkit-transform: scale3d(9, 9, 1);
-                    transform: scale3d(9, 9, 1);
-                }
-            }
-        }
-    }
-}
-#Email {
+
+// CAMPAIGN MONITOR FORM
+#fieldEmail {
+    margin-bottom: 20px;
     padding: 4px 10px;
     width: 100% !important;
     height: 37px;
@@ -650,11 +589,54 @@ footer {
     font-size: 0.875rem;
     color: #000;
 }
-#Email::placeholder {
+#fieldEmail::placeholder {
     font-family: Avenir-Book, sans-serif;
     font-size: 0.875rem;
     color: #000;
 }
+#newsletter_submit {
+    padding: 7.5px 0;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    background: $primary;
+    font-family: Avenir-Medium;
+    font-size: 1rem;
+    color: $secondary_text;
+    text-align: center;
+    text-transform: capitalize;
+    &:before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        margin: -15px 0 0 1px;
+        width: 60px;
+        height: 30px;
+        border-radius: 50%;
+        background: $accent;
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        -webkit-transform: scale3d(1, 2, 1);
+        transform: scale3d(1, 2, 1);
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s;
+        -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+        transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+    }
+}
+#newsletter_submit:hover {
+    text-decoration: none;
+    &:before {
+        -webkit-transform: scale3d(9, 9, 1);
+        transform: scale3d(9, 9, 1);
+    }
+}
+
 .footer_privacy {
     padding: 15px 0;
     background: #505050;
