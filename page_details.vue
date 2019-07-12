@@ -15,6 +15,7 @@
                         </div>
                         <div class="details_col_9">
                             <div class="page_body" v-if="currentPage" v-html="currentPage.body"></div>
+                            <iframe v-if="isThankYou" src="https://giphy.com/embed/3oEdva9BUHPIs2SkGk" width="240" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -22,6 +23,12 @@
         </transition>
     </div>
 </template>
+
+<style>
+    iframe {
+        max-width: 100%;
+    }
+</style>
 
 <script>
     define(["Vue", "vuex", "vue!inside_banner.vue", "vue!side_image.vue", "lightbox"], function (Vue, Vuex, insideBanner, sideImage, Lightbox) {
@@ -34,7 +41,8 @@
                     dataLoaded: false,
                     pageBanner: null,
                     pageName: "Default",
-                    currentPage: {}
+                    currentPage: {},
+                    isThankYou: false
                 }
             },
             created() {
@@ -66,13 +74,19 @@
                         // Determine the incoming route
                         var route_url = "";
                         if (_.includes(this.$route.path, "privacy-policy")) {
-                            route_url = this.property.slug + "-privacy-policy"
+                            route_url = this.property.slug + "-privacy-policy";
                         } else if (_.includes(this.$route.path, "terms-of-use")) {
-                            route_url = this.property.slug + "-terms-of-use"
+                            route_url = this.property.slug + "-terms-of-use";
                         } else {
                             route_url = this.id;
                         }
                         
+                        if (_.includes(this.$route.path, "thank-you")) {
+                            this.isThankYou = true;
+                        } else {
+                            this.isThankYou = false;
+                        }
+                            
                         var _this = this;
                         this.property.mm_host = this.property.mm_host.replace("http:", "");
                         this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + route_url + ".json" }).then(function (response) {
@@ -80,7 +94,7 @@
                             _this.dataLoaded = true;
                         }, function (error) {
                             console.error( "Could not retrieve data from server. Please check internet connection and try again.");
-                            _this.$router.replace({ name: 'home' });
+                            // _this.$router.replace({ name: 'home' });
                         });
                     });
                 }
