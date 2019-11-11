@@ -42,7 +42,10 @@ require.config({
 
 require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-sync', 'datastore', 'vue-i18n', 'locales', 'moment', 'moment-timezone', 'vue-meta', 'vue!loading.vue', 'vue!messages.vue', 'vue!header.vue', 'vue!footer.vue', 'vue!inside_header.vue', 'json!menu_items.json', 'json!site.json', 'vue!loader.vue'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, VuexRouterSync, store, VueI18n, messages, moment, tz, Meta, LoadingComponent, MessagesComponent, HeaderComponent, FooterComponent, insideHeaderComponent, MenuItems, site, Loader) {
 
-    Vue.use(Meta);
+    Vue.use(Meta, {
+       keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.
+       tagIDKeyName: 'vmid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
+    });
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
@@ -118,7 +121,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                         this.$store.dispatch("getData", "promotions"),
                         this.$store.dispatch("getData", "jobs")
                     ]);
-                    await Promise.all([this.$store.dispatch("LOAD_META_DATA")]);
+                    await Promise.all([this.$store.dispatch("LOAD_META_DATA_NEW")]);
                 } catch (e) {
                     console.log("Error loading data: " + e.message);    
                 }
