@@ -28,7 +28,7 @@
                         <a :href="siteInfo.leasing" target="_blank">Leasing</a> |
                         <router-link to="/pages/applevalley-retailer-hub" exact>Retailer Hub</router-link> |
                         <router-link to="/terms-of-use" exact>Terms of Use</router-link> |
-                        <router-link to="/privacy-policy" exact>Privacy Policy</router-link>
+                        <router-link to="https://lewisgroupofcompanies.com/lewis-privacy-policy/" exact>Privacy Policy</router-link>
                     </p>
                 </div>
                 <div>
