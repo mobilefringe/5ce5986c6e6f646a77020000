@@ -128,7 +128,7 @@ define([], function () {
             ]
         },
         {
-            path: 'https://lewisgroupofcompanies.com/lewis-privacy-policy/',
+            path: '/privacy-policy',
             component: view('default'),
             children: [
                 {
