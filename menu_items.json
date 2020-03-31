@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Stores",
+        "href": "/stores"
+    },
+    {
+        "name": "Sales & Events",
+        "href": "/sales-and-events"
+    },
+    {
+        "name": "What's New",
+        "href": "/posts"
+    },
+    {
+        "name": "Center Information",
+        "id": "menu1",
+        "href": "",
+        "sub_menu": [
+            {
+                "name": "Directions",
+                "href": "/directions"
+            },
+            {
+                "name": "About Us",
+                "href": "/about-us"
+            },
+            {
+                "name": "Contact Us",
+                "href": "/contact-us"
+            }
+        ]
+    }
+]
