@@ -1867,6 +1867,9 @@ textarea.form-control {
     .home_banner_container .banner_image {
         height: 150px;
     }
+    .home_banner_container .slick-dots {
+        bottom: 10px;
+    }
     .feature_item {
         .feature_image_container {
             margin-bottom: 20px;
