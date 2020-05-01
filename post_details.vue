@@ -87,6 +87,10 @@
                     if (this.currentPost === null || this.currentPost === undefined) {
                         this.$router.replace({ name: 'posts' });
                     }
+                    
+                    if(this.currentPost.slug == "open-stores-in-apple-valley--2") {
+                        gtag('event', 'conversion', {'send_to': 'AW-718925610/62gqCO-FhcYBEKre59YC'});
+                    }
                 },
                 truncate(val_body) {
                     var truncate = _.truncate(val_body, { 'length': 99, 'separator': ' ' });
