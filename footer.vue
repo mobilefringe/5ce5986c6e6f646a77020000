@@ -13,7 +13,7 @@
                     
                     <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A4C1EA850C2E9F4EEFED1DC797957CE341B46B7665E717F14E746133C2D8B319DDB61590953A515B88015F90954685508">
                         <label class="accessibility" for="fieldEmail">Email </label>
-                        <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-yddyhyr-yddyhyr" required="" type="email">
+                        <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" placeholder="Your Email" id="fieldEmail" maxlength="200" name="cm-yddyhyr-yddyhyr" required="" type="email">
                         <input id="cm-privacy-consent-hidden" name="cm-privacy-consent-hidden" type="hidden" value="true">
                         <button id="newsletter_submit" class="js-cm-submit-button" type="submit">Subscribe To Our Newsletter</button>
                     </form>
